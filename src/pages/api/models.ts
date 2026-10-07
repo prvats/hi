@@ -11,7 +11,7 @@ export const GET: APIRoute = async (context) => {
   let response: Response
   try {
     response = await fetch(`${base}/models`, {
-      headers: { authorization: `Bearer ${key}`, "user-agent": "edith/0.1" },
+      headers: { authorization: `Bearer ${key}`, "user-agent": "hi/0.1" },
       signal: context.request.signal,
     })
   } catch {

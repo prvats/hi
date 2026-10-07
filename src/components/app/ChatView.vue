@@ -67,7 +67,7 @@ watch(
       <Button variant="ghost" size="icon" class="md:hidden" aria-label="Open chats" @click="emit('open-sidebar')">
         <Menu class="size-4" />
       </Button>
-      <h1 class="truncate text-sm font-medium">{{ thread?.title ?? "edith" }}</h1>
+      <h1 class="truncate text-sm font-medium">{{ thread?.title ?? "hi" }}</h1>
 
       <DropdownMenu v-if="thread">
         <DropdownMenuTrigger as-child>
