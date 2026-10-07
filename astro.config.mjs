@@ -6,6 +6,9 @@ import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   output: "server",
+  // Sessions are unused; disabling them drops the adapter's default SESSION KV
+  // binding instead of provisioning a namespace we never read or write.
+  session: false,
   adapter: cloudflare({ imageService: "passthrough" }),
   integrations: [vue()],
   // Astro emits a `<meta>` CSP with hashes for its own inline scripts/styles.

@@ -5,15 +5,6 @@
   "workers_dev": true,
   // Preview URLs are extra public hostnames that bypass the Access app.
   "preview_urls": false,
-  // The Cloudflare adapter enables Astro sessions with a KV binding. We do not
-  // use sessions, but pin the binding here so deploys reuse the namespace
-  // instead of auto-provisioning a new one each time.
-  "kv_namespaces": [
-    {
-      "binding": "SESSION",
-      "id": "dfd880fa162045c3ab16bd1dc784f939"
-    }
-  ],
   "d1_databases": [
     {
       "binding": "DB",
