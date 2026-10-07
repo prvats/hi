@@ -1,4 +1,4 @@
-# AGENTS.md — opencode-chat
+# AGENTS.md — edith
 
 Lean chat UI for OpenCode Go models. Astro + Vue on Cloudflare Workers. $0.
 Read `../AGENTS.md` (workspace) and `first-rule-of-dotfiles/AGENTS.md` (machine,
@@ -21,7 +21,7 @@ Load the matching skill before the work, not after:
 
 ```sh
 npm install
-npx wrangler d1 migrations apply opencode-chat --local
+npx wrangler d1 migrations apply edith --local
 npm run dev      # astro dev, http://localhost:4321
 npm run check    # astro check (types and .astro)
 npm run build    # astro build -> dist/
@@ -33,7 +33,7 @@ npm run deploy   # build, then wrangler deploy
 
 Astro 7 (server output) · Vue 3.5 · Tailwind 4 · shadcn-vue (Reka UI) ·
 `@astrojs/cloudflare` · Cloudflare D1 · Cloudflare Access (GitHub) for auth.
-Spec and plans live in `../.plans/opencode-chat/` and are never committed.
+Spec and plans live in `../.plans/edith/` and are never committed.
 
 ## Architecture
 
@@ -53,7 +53,7 @@ Canonical layout; create each directory as the code lands:
 - `shared/` — types shared by the UI and the endpoints. `shared/schemas.ts`
   (zod) is server-only.
 - `migrations/` — D1 schema. Apply locally with
-  `npx wrangler d1 migrations apply opencode-chat --local`.
+  `npx wrangler d1 migrations apply edith --local`.
 - `POST /api/chat` loads a bounded window of history from D1, persists the user
   message (rolling it back if upstream fails), streams the reply, and records the
   assistant message even when the client stops mid-stream.

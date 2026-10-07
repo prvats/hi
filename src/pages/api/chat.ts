@@ -76,7 +76,7 @@ export const POST: APIRoute = async (context) => {
       headers: {
         authorization: `Bearer ${key}`,
         "content-type": "application/json",
-        "user-agent": "opencode-chat/0.1",
+        "user-agent": "edith/0.1",
         "x-opencode-session": threadId,
       },
       body: JSON.stringify({ model: thread.model, messages, stream: true }),

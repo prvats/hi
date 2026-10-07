@@ -26,7 +26,7 @@ const filtered = computed(() => {
 <template>
   <aside class="flex flex-col bg-sidebar text-sidebar-foreground">
     <div class="flex h-14 items-center gap-2 px-3">
-      <span class="text-sm font-semibold tracking-tight">opencode-chat</span>
+      <span class="text-sm font-semibold tracking-tight">edith</span>
       <Button
         variant="ghost"
         size="icon"
